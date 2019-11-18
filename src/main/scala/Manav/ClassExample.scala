@@ -6,6 +6,7 @@ import org.apache.spark.sql.expressions.Window
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.functions._
 
+// Creating a Case class
 case class Salary(deptName: String, empNo: Int, empName: String, salary: Long, skill: Seq[String])
 
 object WindowFunctions{
@@ -19,7 +20,7 @@ object WindowFunctions{
       .getOrCreate()
 
 
-    // Creating a Case class
+
 
     import spark.implicits._
     //Creating a Dataset
