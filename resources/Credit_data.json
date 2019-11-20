@@ -1,4 +1,16 @@
-{"Gender":"b","Age":"30.83","Debt in Lakhs":"0","Married":"u","Education Level":"w","YearEmployed":"1.25","CreditScore":"1","Citizen":"g","ZipCode":"202","Income in 000's":"0","Approved":"+"}
+{
+  "Gender": "b",
+  "Age": "30.83",
+  "Debt in Lakhs": "0",
+  "Married": "u",
+  "Education Level": "w",
+  "YearEmployed": "1.25",
+  "CreditScore": "1",
+  "Citizen": "g",
+  "ZipCode": "202",
+  "Income in 000's": "0",
+  "Approved": "+"
+}
 {"Gender":"a","Age":"58.67","Debt in Lakhs":"4.46","Married":"u","Education Level":"q","YearEmployed":"3.04","CreditScore":"6","Citizen":"g","ZipCode":"43","Income in 000's":"560","Approved":"+"}
 {"Gender":"a","Age":"24.5","Debt in Lakhs":"0.5","Married":"u","Education Level":"q","YearEmployed":"1.5","CreditScore":"0","Citizen":"g","ZipCode":"280","Income in 000's":"824","Approved":"+"}
 {"Gender":"b","Age":"27.83","Debt in Lakhs":"1.54","Married":"u","Education Level":"w","YearEmployed":"3.75","CreditScore":"5","Citizen":"g","ZipCode":"100","Income in 000's":"3","Approved":"+"}
