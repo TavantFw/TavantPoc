@@ -10,6 +10,8 @@ object dataStorage {
       case _=>ds.write.mode("overwrite").save(dataOutputpath)
     }
 
+
+
   }
   //using DataFrame
   /*def storeDataAsDF(ds :DataFrame, dataOutputpath:String, format:String)={
