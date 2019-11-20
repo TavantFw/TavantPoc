@@ -1,17 +1,9 @@
-import java.io.DataInput
-
-import Config.{DataReaderConfig, configHandler}
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.module.scala.DefaultScalaModule
-import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
+import Config.configHandler
+import Transformation._
 import com.typesafe.scalalogging.StrictLogging
-import dataPreparation.jsonToCreditInfo
 import dataPreparation._
 import org.apache.log4j.Logger
-import org.apache.spark.sql.{Dataset, SparkSession}
-import org.mortbay.util.ajax.JSON
-
-import scala.io.Source
+import org.apache.spark.sql.{DataFrame, SparkSession}
 
 object Main extends  StrictLogging{
 
@@ -28,25 +20,35 @@ object Main extends  StrictLogging{
      val fileMetadata = configHandler.getConfig()  //reading configuration and doing the validation
      logger.info(s" File metadata info   :${fileMetadata}")
      val dataInputPath = fileMetadata.datareaderconfig.datainputpath.get
-     dataPreparation(dataInputPath)// preparing the data for consumption
-    //Transformation
+     val FilteredDataFrame = dataPreparation(dataInputPath) // preparing the data for consumption
+
+     //Doing Transformation
+     val TranDataframe = addingCorrectValues(spark, addIdentityColumn(spark, FilteredDataFrame))
+
+
+     println(TranDataframe.count())
+     TranDataframe.show()
+     TranDataframe.printSchema()
+
      // Storage level
+     TranDataframe.write.format("json").save("TavantPoc\\resources\\")
    }
 
 
-    def dataPreparation(dataInputPath: String):Unit={
+    def dataPreparation(dataInputPath: String): DataFrame = {
 
-      val json = spark.read.json(dataInputPath)
+      val dsjson = spark.read.json(dataInputPath)
         .withColumnRenamed("Debt in Lakhs","DebtinLakhs").
         withColumnRenamed("Income in 000's","Income")
-        .withColumnRenamed("Education Level","Education").toJSON
+        .withColumnRenamed("Education Level", "Education")
 
-      val  ds = removeNullCreditInfo(bussinessCreditInfo(jsonToCreditInfo(json)))
-      ds.show()
-      ds.printSchema()
+      //filtering the data and giving proper schema
+      bussinessCreditInfo(removeNullCreditInfo((dsjson)))
 
     }
-   // val json = Source.fromFile(fileMetadata.datareaderconfig.datainputpath.get)
+
+
+    // val json = Source.fromFile(fileMetadata.datareaderconfig.datainputpath.get)
 
 
 
