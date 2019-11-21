@@ -9,9 +9,7 @@ object dataStorage {
       case "csv"=>ds.write.mode("overwrite").partitionBy("Gender").csv(dataOutputpath)
       case _=>ds.write.mode("overwrite").save(dataOutputpath)
     }
-
-
-
+    
 
 
   }
