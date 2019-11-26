@@ -14,4 +14,5 @@ case class DataWriterConfig(dataoutputpath:Option[String],format:Option[String])
   }
 
 
+
 }

@@ -9,12 +9,9 @@ object dataStorage {
       case "csv"=>ds.write.mode("overwrite").partitionBy("Gender").csv(dataOutputpath)
       case _=>ds.write.mode("overwrite").save(dataOutputpath)
     }
-    
-
-
   }
   //using DataFrame
-  /*def storeDataAsDF(ds :DataFrame, dataOutputpath:String, format:String)={
+  def storeDataAsDF(ds :DataFrame, dataOutputpath:String, format:String)={
     import ds.sparkSession.implicits._
     format match{
       case "json"=>ds.write.mode("overwrite").json(dataOutputpath)
@@ -22,6 +19,5 @@ object dataStorage {
       case _=>ds.write.mode("overwrite").save(dataOutputpath)
     }
 
-  }*/
-
+  }
 }

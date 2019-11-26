@@ -53,5 +53,4 @@ object configHandler extends  StrictLogging {
     }
 
 
-
 }
