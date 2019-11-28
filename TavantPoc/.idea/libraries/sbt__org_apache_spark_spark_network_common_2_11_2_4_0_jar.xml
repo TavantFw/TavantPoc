@@ -6,6 +6,7 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../../../../reshma.pv/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-network-common_2.11/2.4.0/spark-network-common_2.11-2.4.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-network-common_2.11/2.4.0/spark-network-common_2.11-2.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
