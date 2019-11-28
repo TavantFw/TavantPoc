@@ -29,6 +29,10 @@ object dataPreparation {
     import ds.sparkSession.implicits._
     ds.select($"Gender".cast(StringType),
       $"Age".cast(IntegerType),
+<<<<<<< HEAD
+=======
+      $"Married".cast(StringType),
+>>>>>>> origin/Reshma
       $"DebtinLakhs".cast(DoubleType),
       $"YearEmployed".cast(StringType),
       $"Education".cast(StringType),

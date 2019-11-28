@@ -26,12 +26,41 @@ trait usableConfigurable extends StrictLogging {
         false
     }
   }
+<<<<<<< HEAD
 
   def existsFilePath(path:String):Boolean ={
     Path.fromString(path).exists && Path.fromString(path).isFile
   }
   def fileFormat(path:String):Boolean={
     path.split("\\.").last == "json"
+=======
+  def isValidDataOutputPath(dataOutputPath: Option[String]):Boolean = {
+
+    logger.info("Validating the output file path ")
+
+    dataOutputPath match {
+      case  Some(path) =>
+        if (existsFilePath(path)) {
+
+          true
+
+        } else {
+          logger.error(s"The provided file path  (path:${dataOutputPath.get}) does not exist.")
+          false
+        }
+      case _  =>
+        logger.error("Please provide the correct path to the data input.")
+        false
+    }
+  }
+
+
+  def existsFilePath(path:String):Boolean ={
+    Path.fromString(path).exists
+  }
+  def fileFormat(path:String):Boolean={
+    path.split("\\.").last == "json" && Path.fromString(path).isFile
+>>>>>>> origin/Reshma
   }
 
 }

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 [debug] "not up to date. inChanged = false, force = false
 [debug] Updating ProjectRef(uri("file:/C:/TavantPoc/project/"), "tavantpoc-build")...
 [debug] Done updating ProjectRef(uri("file:/C:/TavantPoc/project/"), "tavantpoc-build")
+=======
+[debug] "not up to date. inChanged = true, force = false
+[debug] Updating ProjectRef(uri("file:/D:/TavantPoc-master/project/"), "tavantpoc-master-build")...
+[debug] Done updating ProjectRef(uri("file:/D:/TavantPoc-master/project/"), "tavantpoc-master-build")
+>>>>>>> origin/Reshma

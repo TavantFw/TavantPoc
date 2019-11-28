@@ -53,5 +53,8 @@ object configHandler extends  StrictLogging {
     }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Reshma
 }

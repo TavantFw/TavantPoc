@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TavantPoc.iml" filepath="$PROJECT_DIR$/.idea/modules/TavantPoc.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TavantPoc-build.iml" filepath="$PROJECT_DIR$/.idea/modules/TavantPoc-build.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tavantpoc-master.iml" filepath="$PROJECT_DIR$/.idea/modules/tavantpoc-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tavantpoc-master-build.iml" filepath="$PROJECT_DIR$/.idea/modules/tavantpoc-master-build.iml" />
+>>>>>>> origin/Reshma
     </modules>
   </component>
 </project>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
+<<<<<<< HEAD
     <profile name="sbt 1" modules="TavantPoc,tavantpoc" />
+=======
+    <profile name="sbt 1" modules="tavantpoc-master_2212,tavantpoc-master" />
+>>>>>>> origin/Reshma
   </component>
 </project>
